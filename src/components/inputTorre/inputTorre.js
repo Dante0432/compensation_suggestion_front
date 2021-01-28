@@ -13,37 +13,32 @@ const CssTextField = withStyles({
       },
       '& .MuiOutlinedInput-root': {
         '& fieldset': {
-            color: '#cddc39',
+        color: '#cddc39',
           borderColor: '#cddc39',
           backgroundColor:"cddc39",
         },
         '&:hover fieldset': {
           borderColor: ' #cddc39',
-
+          color: '#cddc39',
         },
         '&.Mui-focused fieldset': {
 
           borderColor: ' #cddc39',
-
+          color: '#cddc39',
         },
       },
     },
   })(TextField);
 
-  const styles = theme => ({
-    multilineColor:{
-        color:'red'
-    }
-});
-
 const InputTorre = (props) => {
-
+    const action = (e) => props.action(e);
     return (
         <CssTextField 
             className={classes.margin}
             label="userename (example:jgcardenasa)"
             variant="outlined"
             id="custom-css-outlined-input"
+            onChange={action}
       />
     )
 }

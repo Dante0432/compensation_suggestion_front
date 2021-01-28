@@ -10,6 +10,7 @@ const ButtonTorre = (props) => {
         <Button variant="contained"
                 className={ classes.green }
                 onClick={ action }
+                onKeyDown={ action }
                 fullWidth={ props.fullWith }
                 >
             {props.children}

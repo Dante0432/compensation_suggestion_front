@@ -3,17 +3,16 @@ import Hexagon from 'react-hexagon'
 import classes from './hexagonTorre.module.css';
 
 const HexagonTorre = (props) => {
-
-    const action = (e) => props.action(e);
-
     return (
         <Hexagon
-            backgroundImage = "https://starrgate.s3.amazonaws.com:443/users/ab858f56bb435c3ebc55d77bdb4167027246a924/profile_OeOceqL.jpg"  
-            backgroundScale={1.1}
-            style={ { strokeWidth:10, stroke:"#5E626B" } } 
+            backgroundImage = { props.urlImage }
+            backgroundScale={1.05}
+            style={ { strokeWidth:10, stroke:"#5E626B",text: "#5E626B"} } 
             className={classes.hexagon}
-            onClick={ action }
+            class="text"
         >
+            <text className={classes.info} x="15%" y="50%">{ props.children }</text>
+            
         </Hexagon>
     )
 }
