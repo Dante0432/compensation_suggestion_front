@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+  background-color: #27292d;
+  display: flex;
+  height: 100vh;
+  padding: 2%;
+}
+
+.hexagon{
+  background-color: black;
+  border: black;
+  width: 50px;
+  position: absolute;
+}
+
+
+#root svg{
+  width: 20%;
+}
