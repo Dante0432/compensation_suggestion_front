@@ -41,7 +41,7 @@ const App = (props) =>{
   const buttonHandler = (e) => {
     
     if(username){
-    axios.post('ec2-3-101-14-165.us-west-1.compute.amazonaws.com:3000/api/v1/calculator/'+username, {
+    axios.post('http://ec2-3-101-14-165.us-west-1.compute.amazonaws.com:3000/api/v1/calculator/'+username, {
             }).then((response) => {
               console.log('mierda')
               if(response.status===200){
